@@ -1,0 +1,28 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  margin: 0;
+  padding: 0;
+
+  align-items: start;
+  list-style: none;
+}
+
+.item {
+  border: 1px solid #eee;
+  padding: 10px;
+  align-self: center;
+  border-radius: 4px;
+  width: 50%;
+
+  cursor: pointer;
+}
+
+.item:hover {
+    transform: translate(0, 2px);
+    transition: transform .2s ease-in-out;
+    background-color: rgba(103, 158, 158, .5);
+    color: white;
+}

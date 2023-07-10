@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Question from "./components/question/Question";
+import { questions } from "./data/questions";
+import Result from "./components/result/Result";
 
 function App() {
+  const [step, setStep] = useState(0);
+  const [wrightAnswersCounter, setWrightAnswersCounter] = useState(0);
+
+  const question = questions[step] ? questions[step] : null;
+
+  const onAnswerClick = (index) => {
+    setStep((prev) => prev + 1);
+
+    if (question.wrightAnswerIndex === index)
+      setWrightAnswersCounter((prev) => prev + 1);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {question ? (
+        <Question
+          question={question}
+          step={step}
+          onAnswerClick={onAnswerClick}
+        />
+      ) : (
+        <Result wrightAnswersCounter={wrightAnswersCounter} />
+      )}
     </div>
   );
 }

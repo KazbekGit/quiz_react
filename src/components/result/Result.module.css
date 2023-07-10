@@ -1,0 +1,56 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 500px;
+    min-height: 300px;
+
+    border: 1px solid #eee;
+    border-radius: 7px;
+    padding: 20px;
+
+    box-shadow: 2px 4px 1px rgba(65, 95, 95, 0.5);
+}
+
+.wrapper p {
+    background-color: rgba(231, 240, 233, 0.8);
+    border: 1px solid #eee;
+    border-radius: 7px;
+    padding: 20px;
+}
+
+.congratulate {
+    background-image: url(/public/img/fireworks.png);
+    background-position: 260px;
+    box-shadow: 2px 4px 1px rgb(134, 201, 108);
+}
+
+.wrapper b {
+    font-size: 26px;
+    color: #5b7c4e;
+}
+
+.wrapper div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 40px;
+
+
+    border: 1px solid #5c7452;
+    background-color:#5b7c4e ;
+    border-radius: 7px;
+}
+
+.wrapper a {    
+    width: 30%;
+
+    margin-top: auto;
+    align-self: center;
+
+
+    color: #eee;
+    text-decoration: none;
+}
